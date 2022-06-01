@@ -2,7 +2,16 @@ let nombre= prompt("Ingrese los nombres de los integrantes de tu familia y escri
 let ingresados="";
 while(nombre!="ESC"){
     ingresados+=nombre +"\n";
-    alert(ingresados)
-    nombre= prompt("ingrese")
+    console.log(nombre);
+    alert(ingresados);
+    nombre= prompt("ingrese el siguiente integrante de tu familia y escriba ESC al terminar");
 }
-alert("nombres ingresados:"+"\n"+ingresados) 
+alert("Nombres ingresados:"+"\n"+ingresados)  
+
+
+
+
+
+
+
+
