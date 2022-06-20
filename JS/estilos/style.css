@@ -1,0 +1,71 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  font-family: "Josefin Sans", sans-serif;
+}
+.body {
+  background-color: #f9f2ec;
+}
+header {
+  height: 40px;
+  background-color: #1f212c;
+}
+header h1 {
+  font-weight: bolder;
+  color: white;
+}
+menu .texto {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+menu .texto h2 {
+  color: #00966b;
+  font-weight: bolder;
+}
+.texto p {
+  color: #1f212c;
+  font-size: large;
+  font-weight: 600;
+}
+menu .imagen {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+.ofertas h2 {
+  margin-top: 50px;
+  background-color: #00966b;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+.box {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.box1 {
+  width: 400px;
+  height: 150px;
+  background-color: white;
+}
+.box1 h3 {
+  display: flex;
+  justify-content: center;
+  color: #1f212c;
+}
+.box2 {
+  width: 400px;
+  height: 150px;
+  background-color: white;
+}
+.box2 h3 {
+  display: flex;
+  justify-content: center;
+  color: #1f212c;
+}
