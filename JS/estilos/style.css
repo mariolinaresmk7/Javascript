@@ -15,7 +15,7 @@ header h1 {
   color: white;
 }
 menu .texto {
-  margin-top: 100px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,11 +31,12 @@ menu .texto h2 {
   font-weight: 600;
 }
 menu .imagen {
-  margin-top: 150px;
+  margin-top: 130px;
   display: flex;
   justify-content: center;
 }
-.ofertas h2 {
+/* className */
+.ofertas h2 { 
   margin-top: 50px;
   background-color: #00966b;
   display: flex;
@@ -49,23 +50,51 @@ menu .imagen {
   flex-direction: row;
   justify-content: space-evenly;
 }
-.box1 {
+.boxprestamos{
   width: 400px;
   height: 150px;
   background-color: white;
 }
-.box1 h3 {
+.boxprestamos p{
+  font-weight: 600;
+}
+.boxprestamos h3{
+    display: flex;
+    justify-content: center;
+    color: #1f212c;
+    font-weight: bolder
+}
+.beneficios {
+  transform: translateY(-325px);
+  text-align: center;
+  color:#1f212c;
+  font-weight: bold;
+}
+.formulario {
   display: flex;
   justify-content: center;
-  color: #1f212c;
+  padding: 150px;
 }
-.box2 {
-  width: 400px;
-  height: 150px;
+.validacion {
+  background-color:#00966b;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  
+
+
+}
+.form-label{
+  color: white;
+}
+.btn{
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.usuarioResultado{
+  transform: translateY(-100px);
+  text-align: center;
+  font-weight: bold;
   background-color: white;
-}
-.box2 h3 {
-  display: flex;
-  justify-content: center;
   color: #1f212c;
 }

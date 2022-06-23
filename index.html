@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BancAmer</title>
-    <script src="JS/index.js"></script>
     <link rel="stylesheet" href="JS/estilos/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,18 +30,44 @@
             <div><img src="/img_introHome.png" alt="" srcset=""></div>
         </section>
     </menu>
-    <div class=" ofertas">
+    
+    <div id="pre">
         <h2>Tipos de prestamos</h2>
         <div class="box">
-            <div class="box1">
+            <div id="prestamosP">
                 <h3>Prestamos Personales</h3>
             </div>
-            <div class="box2">
+            <div id="prestamosP1">
                 <h3>Prestamos Prendarios</h3>
             </div>
         </div>
+    </div>
+
+    <div class="row formulario" id="formulario">
+        <form class="col-lg-4  validacion">
+            <div class="col-md-12 validacion1">
+                <label for="validationCustom01m" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="validationCustom01m" value>
+            </div>
+            <div class="col-md-12">
+                <label for="validationCustom02m" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="validationCustom02m" value>
+            </div>
+            <div class="col-md-12">
+                <label for="validationCustom03m" class="form-label">Dni</label>
+                <input type="text" class="form-control" id="validationCustom03m" value>
+            </div>
+            <div class="col-12">
+                <button class="btn " id="botonUsuario" type="submit">Submit form</button>
+            </div>
+            
+        </form>
+        
+    </div>
+    <div id="usuario" class="usuarioResultado">
 
     </div>
+    <script src="JS/index.js"></script>
 </body>
 
 </html>

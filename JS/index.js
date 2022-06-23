@@ -7,6 +7,32 @@ const banco = {
     intereses: " ",
     coutas: " ",
 }
+//DOM
+/* ClassName */
+let ofertas = document.getElementById('pre');
+ofertas.className = 'ofertas'
+let boxPrestamos = document.getElementById('prestamosP');
+boxPrestamos.className = ('boxprestamos');
+let boxPrestamos1 = document.getElementById('prestamosP1');
+boxPrestamos1.className = ('boxprestamos');
+
+/* innerHTML */
+let descripcion = document.getElementById('prestamosP')
+descripcion.innerHTML = '<h3>Prestamos Personales</h3> <p>¡Accedé a un préstamo personal con la mejor oferta para vos!</p>'
+let descripcion1 = document.getElementById('prestamosP1')
+descripcion1.innerHTML = ('<h3>Prestamos Prendario</h3> <p>Aprovechá las mejores condiciones de financiación para encontrar el vehículo que necesitás. </p>')
+/* agregar un nodo */
+let parrafo = document.createElement('h3')
+parrafo.innerText = 'Si ya sos cliente, conocé la tasa que tenemos para vos.'
+parrafo.classList.add('beneficios')
+let formulario = document.getElementById('formulario')
+formulario.append(parrafo)
+
+
+
+
+
+
 // CLASS CONTRUCTORA
 class Usuario {
     constructor(nombre, apellido, usuarioBanco, dni, ) {
@@ -16,6 +42,7 @@ class Usuario {
         this.dni = dni
     }
 }
+
 
 //ARRAY DE COUTAS 
 const coutasPrestamoPrendario = [0.35, 0.70, 1.05, 1.4];
@@ -39,19 +66,19 @@ function prestamosClientes() {
         switch (cantidadDeCoutas) {
             case 12:
                 intereses = array[0] * banco.montoDelCredito;
-                console.log('total de intereses: '+intereses)
+                console.log('total de intereses: ' + intereses)
                 break;
             case 24:
                 intereses = array[1] * banco.montoDelCredito;
-                console.log('total de intereses: '+intereses)
+                console.log('total de intereses: ' + intereses)
                 break;
             case 36:
                 intereses = array[2] * banco.montoDelCredito;
-                console.log('total de intereses: '+intereses)
+                console.log('total de intereses: ' + intereses)
                 break;
             case 48:
                 intereses = array[3] * banco.montoDelCredito;
-                console.log('total de intereses: '+intereses)
+                console.log('total de intereses: ' + intereses)
                 break;
             default:
                 alert('Vuelva a comenzar y coloque la cantidad de coutas estipuladas por el banco')
@@ -64,16 +91,42 @@ function prestamosClientes() {
         alert('Su total a pagar es de ' + cantidadDeCoutas + ' coutas de $' + coutas);
     };
 }
+const cargarUsuario = () => {
+    let nombre=document.getElementById('validationCustom01m').value;
+    /* nombre.innerText = prompt('ingrese su nombre'); */
+    let apellido=document.getElementById('validationCustom02m').value;
+    /*  apellido.innerText = prompt('ingrese su apellido'); */
+    let dni= document.getElementById('validationCustom03m').value;
+    /*  dni.innerText = +prompt('ingrese su dni'); */
+    let nuevoUsuario = document.getElementById('usuario')
+    nuevoUsuario.innerHTML = `<h4>Nombre y Apellido: ${nombre}, ${apellido}.</h4>
+                               <p>DNI: ${dni}</p>`
+}
 
 // EN FUNCIONAMIENTO
 usuarioBanco = prompt('Usted es cliente del banco: Si o No');
 console.log('Usuario de banco: ' + usuarioBanco.toUpperCase());
 if (usuarioBanco.toLowerCase() == 'si') {
-    nombre = prompt('ingrese su nombre');
-    apellido = prompt('ingrese su apellido');
-    dni = +prompt('ingrese su dni');
+
+    //nombre = document.getElementById('validationCustom01m').value
+    /* nombre.innerText= document.getElementById('validationCustom01m').value  */
+    //apellido = document.getElementById('validationCustom02m').value
+    /*  apellido.innerText=  document.getElementById('validationCustom02m').value  */
+    //dni = document.getElementById('validationCustom03m').value
+     /* dni.innerText= document.getElementById('validationCustom03m').value */
+        
+    nombre=prompt('Nombre')
+    apellido= prompt('apellido')
+    dni=+prompt('DNI') 
     const cliente = new Usuario(nombre, apellido, usuarioBanco, dni);
-    alert('Bienvenido ' + cliente.nombre.toUpperCase() + ' ' + cliente.apellido.toUpperCase())
+     let nuevoUsuario = document.getElementById('usuario')
+     nuevoUsuario.innerHTML = ` <h2>Bienvenido</h2>
+                                <h4>Nombre y Apellido: ${nombre.toUpperCase()}, ${apellido.toUpperCase()}.</h4>
+                               <p>DNI: ${dni}</p>`;
+  
+
+
+    /* alert('Bienvenido ' + cliente.nombre.toUpperCase() + ' ' + cliente.apellido.toUpperCase()); */
     alert('Por ser cliente le vamos a hacer una bonificacion en la tasa de interes del prestamo a solicitar')
     tipoDeCredito = prompt('Ingrese el tipo de prestamo que desea solicitar: prendario o personal')
     console.log(tipoDeCredito);
@@ -111,6 +164,3 @@ if (usuarioBanco.toLowerCase() == 'si') {
 } else {
     alert('Error, vuelva a comenzar y complete de forma correcta los datos')
 }
-
-
-
