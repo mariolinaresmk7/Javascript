@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./JS/estilos/style.css">
     <title>BancAmer</title>
-    <link rel="stylesheet" href="JS/estilos/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Lexend+Exa:wght@300&display=swap"
@@ -15,7 +15,7 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
-<body class="container-fluid body">
+<body>
     <header class="row">
         <h1>BancAmer</h1>
     </header>
@@ -27,47 +27,45 @@
                 que buscás.</p>
         </section>
         <section class="col-lg-6 imagen">
-            <div><img src="/img_introHome.png" alt="" srcset=""></div>
+            <div><img src="./JS/estilos/img_introHome.png" alt="" srcset=""></div>
         </section>
     </menu>
-    
-    <div id="pre">
-        <h2>Tipos de prestamos</h2>
-        <div class="box">
-            <div id="prestamosP">
-                <h3>Prestamos Personales</h3>
-            </div>
-            <div id="prestamosP1">
-                <h3>Prestamos Prendarios</h3>
-            </div>
+    <div class="tituloCliente">
+        <h1>Simula tu prestamo</h1>
+    </div>
+    <aside class="usuarioResultado" ><!-- RESULTADO DE LA SIMULACION -->
+        <div id="tituloDeResultados"><!-- TITULO -->
         </div>
+        <!-- DATOS DE USUARIOS -->
+        <div id="usuario" class="usuarioResultado">
+        </div>
+        <!-- MENSAJE DE BENEFICIOS -->
+        <div id="beneficio" class="usuarioResultado">
+        </div>
+        <!-- MENSAJE DE RESULTADO A PAGAR -->
+        <div id="totalAPagar" class="usuarioResultado">
+        </div>
+    </aside>
+<form  class="contenedorPadre "action="">
+    <h2>¿¿ Ya sos cliente ??</h2>
+    <div class="cliente ">
+        <!-- SOS CLIENTE SI O NO -->
+        <label for="usuarioDeBanco1">Si</label>
+        <input type="radio" id="usuarioDeBanco1" name=opciones value="si">
+        <label for="usuarioDeBanco2">NO</label>
+        <input type="radio" id="usuarioDeBanco2" name=opciones value="no">
     </div>
+    <div class="botones">
+        <input type="submit" value="Comenzar Simulación" id="btn-simulacion" class="boton">
+        <!-- <button type="button" class="boton" id="btn-simulacion">Comenzar Simulación</button> -->
+        <input type="reset" value="Reset" class="boton">
+    </div>
+</form>
 
-    <div class="row formulario" id="formulario">
-        <form class="col-lg-4  validacion">
-            <div class="col-md-12 validacion1">
-                <label for="validationCustom01m" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="validationCustom01m" value>
-            </div>
-            <div class="col-md-12">
-                <label for="validationCustom02m" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="validationCustom02m" value>
-            </div>
-            <div class="col-md-12">
-                <label for="validationCustom03m" class="form-label">Dni</label>
-                <input type="text" class="form-control" id="validationCustom03m" value>
-            </div>
-            <div class="col-12">
-                <button class="btn " id="botonUsuario" type="submit">Submit form</button>
-            </div>
-            
-        </form>
-        
-    </div>
-    <div id="usuario" class="usuarioResultado">
+<form class="contenedorPadre1" action="" id="formularioPadre">
+</form>
 
-    </div>
-    <script src="JS/index.js"></script>
+    <script src="./JS/index.js"></script>
 </body>
 
 </html>

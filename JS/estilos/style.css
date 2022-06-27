@@ -4,7 +4,7 @@
   font-family: "Josefin Sans", sans-serif;
 }
 .body {
-  background-color: #f9f2ec;
+  background-color:#f9f2ec;
 }
 header {
   height: 40px;
@@ -20,6 +20,7 @@ menu .texto {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 }
 menu .texto h2 {
   color: #00966b;
@@ -35,66 +36,83 @@ menu .imagen {
   display: flex;
   justify-content: center;
 }
-/* className */
-.ofertas h2 { 
-  margin-top: 50px;
+.tituloCliente{
   background-color: #00966b;
-  display: flex;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-}
-.box {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.boxprestamos{
-  width: 400px;
-  height: 150px;
-  background-color: white;
-}
-.boxprestamos p{
-  font-weight: 600;
-}
-.boxprestamos h3{
-    display: flex;
-    justify-content: center;
-    color: #1f212c;
-    font-weight: bolder
-}
-.beneficios {
-  transform: translateY(-325px);
   text-align: center;
-  color:#1f212c;
-  font-weight: bold;
+  color:white;
+
 }
-.formulario {
+.contenedorPadre {
+  background-color:#00966b;
+  height: 180px;
   display: flex;
-  justify-content: center;
-  padding: 150px;
+  flex-direction: column;
+  color: white;
+  align-content: center;
 }
-.validacion {
+.contenedorPadre h2{
+  text-align: center;
+}
+.contenedorPadre1{
   background-color:#00966b;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  
-
-
-}
-.form-label{
   color: white;
+  align-content: center;
 }
-.btn{
-  margin-top: 15px;
-  margin-bottom: 10px;
+.cliente {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-weight: bold;
 }
-.usuarioResultado{
-  transform: translateY(-100px);
+.datosCliente {
+  display: flex;
+  flex-direction: column;
+}
+.datosCliente input{
+  border-radius: 5px;
+}
+.tipoDePrestamo{
+  display: flex;
+  flex-direction: column;
+}
+.tipoDePrestamo select{
+  border-radius: 5px;
+}
+
+.contenedorHijo2 {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  border-radius: 5px;
+}
+.contenedorHijo2 input, select{
+  border-radius: 5px;
+  
+}
+.usuarioResultado  {
   text-align: center;
   font-weight: bold;
-  background-color: white;
+  background-color:#f9f2ec;
   color: #1f212c;
+}
+.botones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.boton {
+  margin-top: 15px;
+  width: 400px;
+  color: #00966b;
+}
+.botones button, input{
+  border-radius: 5px;
+}
+.tituloDeResultados{
+  color: white;
+  background-color:#1f212c;
 }
