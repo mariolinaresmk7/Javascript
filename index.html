@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -33,39 +34,34 @@
     <div class="tituloCliente">
         <h1>Simula tu prestamo</h1>
     </div>
-    <aside class="usuarioResultado" ><!-- RESULTADO DE LA SIMULACION -->
-        <div id="tituloDeResultados"><!-- TITULO -->
+    <form class="contenedorPadre " action="">
+        <h2>¿¿ Ya sos cliente ??</h2>
+        <div class="cliente ">
+            <!-- SOS CLIENTE SI O NO -->
+            <label for="usuarioDeBanco1">Si</label>
+            <input type="radio" id="usuarioDeBanco1" name=opciones value="si">
+            <label for="usuarioDeBanco2">NO</label>
+            <input type="radio" id="usuarioDeBanco2" name=opciones value="no">
         </div>
-        <!-- DATOS DE USUARIOS -->
-        <div id="usuario" class="usuarioResultado">
+        <div class="botones">
+            <input type="submit" value="Comenzar Simulación" id="btn-simulacion" class="btn btn-secondary mt-3">
         </div>
-        <!-- MENSAJE DE BENEFICIOS -->
-        <div id="beneficio" class="usuarioResultado">
-        </div>
-        <!-- MENSAJE DE RESULTADO A PAGAR -->
-        <div id="totalAPagar" class="usuarioResultado">
-        </div>
-    </aside>
-<form  class="contenedorPadre "action="">
-    <h2>¿¿ Ya sos cliente ??</h2>
-    <div class="cliente ">
-        <!-- SOS CLIENTE SI O NO -->
-        <label for="usuarioDeBanco1">Si</label>
-        <input type="radio" id="usuarioDeBanco1" name=opciones value="si">
-        <label for="usuarioDeBanco2">NO</label>
-        <input type="radio" id="usuarioDeBanco2" name=opciones value="no">
+    </form>
+    <div class="storage" id="storage">
     </div>
-    <div class="botones">
-        <input type="submit" value="Comenzar Simulación" id="btn-simulacion" class="boton">
-        <!-- <button type="button" class="boton" id="btn-simulacion">Comenzar Simulación</button> -->
-        <input type="reset" value="Reset" class="boton">
+    <form class="contenedorPadre1" action="" id="formularioPadre">
+    </form>
+    <div id="mensajeResultado">
+        <!-- muestra un alerta de nombre y apellido mal ingresado sino continua -->
     </div>
-</form>
+    <div id="selectCredito"></div>
 
-<form class="contenedorPadre1" action="" id="formularioPadre">
-</form>
-
+    <script src="./JS/obj-array-var.js"></script>
+    <script src="./JS/funciones.js"></script>
     <script src="./JS/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -95,7 +95,7 @@ menu .imagen {
 .usuarioResultado  {
   text-align: center;
   font-weight: bold;
-  background-color:#f9f2ec;
+  
   color: #1f212c;
 }
 .botones {
@@ -113,6 +113,18 @@ menu .imagen {
   border-radius: 5px;
 }
 .tituloDeResultados{
-  color: white;
-  background-color:#1f212c;
+  color:#1f212c;
+  font-weight: bold;
+  text-align: center;
+}
+.storage{
+  background-color: #f9f2ec;
+  text-align: center;
+  color: #1f212c;
+}
+.storage h2{
+  font-weight: bold;
+}
+.storage h5{
+  font-weight: bolder;
 }
