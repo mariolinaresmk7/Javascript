@@ -51,7 +51,7 @@ botonSimulacion.onclick = (e) => {
                 const listaCliente = [];
                 listaCliente.push(new Usuario(nombre, apellido, usuarioBanco, dni));
                 console.log(listaCliente.length);
-                console.log(listaCliente)
+                console.log(...listaCliente)
                 for (const usuario of listaCliente) {
                     console.log('Nombre: ' + usuario.nombre.toUpperCase());
                     console.log('Apellido: ' + usuario.apellido.toUpperCase());

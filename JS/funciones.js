@@ -47,40 +47,44 @@ function prestamosClientes() {
 function storageUsuario() {
     const activeName = localStorage.getItem('nombre');
     const activeLastName = localStorage.getItem('apellido');
-    if (activeName === null || activeLastName === null) {
-        console.log('No hay datos a recargar para el storage')
-    } else {
-        let storage = document.getElementById('storage');
-        storage.innerHTML = `<h2>Retomemos donde dejaste</h2>
+    (activeName === null || activeLastName === null) ? console.log('No hay datos a recargar para el storage'): procesoStorage(); // operador ternario
+}
+
+function procesoStorage() {
+    const activeName = localStorage.getItem('nombre');
+    const activeLastName = localStorage.getItem('apellido');
+    let storage = document.getElementById('storage');
+    storage.innerHTML = `<h2>Retomemos donde dejaste</h2>
                               <h5> ${activeName} ${activeLastName}</h5> `;
-        formularioStorageAndNotUser();
-        let simularPrestamo3 = document.getElementById('simularPrestamo3');
-        simularPrestamo3.onclick = (e) => {
-            e.preventDefault();
-            let tipoDeCredito = document.getElementById('tipoDePrestamo');
-            console.log(`Tipo de credito: ${tipoDeCredito.value}`);
-            if (tipoDeCredito.value == '0') {
-                swal({
-                    title: 'Simulador de credito',
-                    text: 'Por favor, seleccione el tipo de credito a solicitar',
-                    icon: 'error',
-                })
-            } else if (tipoDeCredito.value == 'prendario') {
-                let creiditosclientes = prestamosClientes();
-                console.log(creiditosclientes(coutasPrestamoPrendarioconBeneficios))
-            } else if (tipoDeCredito.value == 'personal') {
-                let creiditosclientes = prestamosClientes();
-                console.log(creiditosclientes(coutasPrestamoPersonalconBeneficios))
-            }
-            let tipoDePrestamo_ = document.getElementById('tipoDeCredito')
-            tipoDePrestamo_.innerHTML = `<h2>Tipo de prestamo: ${tipoDeCredito.value}</h2>`
+    formularioStorageAndNotUser();
+    resultado();
+    let simularPrestamo3 = document.getElementById('simularPrestamo3');
+    simularPrestamo3.onclick = (e) => {
+        e.preventDefault();
+        let tipoDeCredito = document.getElementById('tipoDePrestamo');
+        console.log(`Tipo de credito: ${tipoDeCredito.value}`);
+        if (tipoDeCredito.value == '0') {
+            swal({
+                title: 'Simulador de credito',
+                text: 'Por favor, seleccione el tipo de credito a solicitar',
+                icon: 'error',
+            })
+        } else if (tipoDeCredito.value == 'prendario') {
+            let creiditosclientes = prestamosClientes();
+            console.log(creiditosclientes(coutasPrestamoPrendarioconBeneficios))
+        } else if (tipoDeCredito.value == 'personal') {
+            let creiditosclientes = prestamosClientes();
+            console.log(creiditosclientes(coutasPrestamoPersonalconBeneficios))
         }
-        let reload = document.getElementById('reload');
-        reload.onclick = () => {
-            location.reload();
-        }
+        let tipoDePrestamo_ = document.getElementById('tipoDeCredito')
+        tipoDePrestamo_.innerHTML = `<h2>Tipo de prestamo: ${tipoDeCredito.value}</h2>`
+    }
+    let reload = document.getElementById('reload');
+    reload.onclick = () => {
+        location.reload();
     }
 }
+
 
 function formularioStorageAndNotUser() { //Funcion para formulario de storage y no usuarios
     let formularioPadre = document.getElementById('formularioPadre')
