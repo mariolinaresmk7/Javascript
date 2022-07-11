@@ -1,64 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./JS/estilos/style.css">
-    <title>BancAmer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Lexend+Exa:wght@300&display=swap"
-        rel="stylesheet">
+    <title>Simulador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="/estilos/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
-
 <body>
-    <header class="row">
-        <h1>BancAmer</h1>
-    </header>
-    <menu class="row menu">
-        <section class="col-lg-6 texto">
-            <h2>¡En BancAmer pensamos en vos!</h2>
-            <p>Conseguí tu préstamo de forma rápida y sencilla, incluso si no sos cliente del Banco.</p>
-            <p>Préstamos inmediatos y fáciles de obtener. Explorá nuestras opciones y elegí la que más se ajusta a lo
-                que buscás.</p>
-        </section>
-        <section class="col-lg-6 imagen">
-            <div><img src="./JS/estilos/img_introHome.png" alt="" srcset=""></div>
-        </section>
-    </menu>
-    <div class="tituloCliente">
-        <h1>Simula tu prestamo</h1>
-    </div>
-    <form class="contenedorPadre " action="">
-        <h2>¿¿ Ya sos cliente ??</h2>
-        <div class="cliente ">
-            <!-- SOS CLIENTE SI O NO -->
-            <label for="usuarioDeBanco1">Si</label>
-            <input type="radio" id="usuarioDeBanco1" name=opciones value="si">
-            <label for="usuarioDeBanco2">NO</label>
-            <input type="radio" id="usuarioDeBanco2" name=opciones value="no">
+    <div class="row contenedor">
+        <form class="col-lg-4 mt-3">
+            <h3 class="mt-3 ms-5 titulo">Simulador de prestamo</h3>
+            <h5>¿¿ Ya sos cliente ??</h5>
+            <div class="cliente " id="radio">
+                <!-- SOS CLIENTE SI O NO -->
+                <label for="usuarioDeBanco1">Si</label>
+                <input type="radio" id="usuarioDeBanco1" name=opciones value="si">
+                <label for="usuarioDeBanco2">NO</label>
+                <input type="radio" id="usuarioDeBanco2" name=opciones value="no">
+            </div>
+           <!--  <input type="submit" value="Comenzar Simulación" id="btn-simulacion" class="btn btn-secondary mt-3"> -->
+            <div id="user">
+            </div>
+        </form>
+        <div class="col-lg-6 mt-3 imagen">
+            <img src="/JS/estilos/img_introHome.png" alt="">
         </div>
-        <div class="botones">
-            <input type="submit" value="Comenzar Simulación" id="btn-simulacion" class="btn btn-secondary mt-3">
-        </div>
-    </form>
-    <div class="storage" id="storage">
     </div>
-    <form class="contenedorPadre1" action="" id="formularioPadre">
-    </form>
-    <div id="mensajeResultado">
-        <!-- muestra un alerta de nombre y apellido mal ingresado sino continua -->
+
+    <div class="text-center mt-3 text-white row" id="storage">
     </div>
-   
+
 
     <script src="./JS/obj-array-var.js"></script>
     <script src="./JS/funciones.js"></script>
     <script src="./JS/index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/Javascript/moment.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>

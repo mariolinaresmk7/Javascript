@@ -1,130 +1,16 @@
-* {
-  padding: 0%;
-  margin: 0%;
-  font-family: "Josefin Sans", sans-serif;
+*{
+  font-family: 'Quicksand', sans-serif;
 }
-.body {
-  background-color:#f9f2ec;
+body {
+  background: #3CA55C;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #B5AC49, #3CA55C);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #B5AC49, #3CA55C);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-header {
-  height: 40px;
-  background-color: #1f212c;
-}
-header h1 {
-  font-weight: bolder;
-  color: white;
-}
-menu .texto {
-  margin-top: 80px;
+.contenedor{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-}
-menu .texto h2 {
-  color: #00966b;
-  font-weight: bolder;
-}
-.texto p {
-  color: #1f212c;
-  font-size: large;
-  font-weight: 600;
-}
-menu .imagen {
-  margin-top: 130px;
-  display: flex;
-  justify-content: center;
-}
-.tituloCliente{
-  background-color: #00966b;
-  text-align: center;
-  color:white;
-
-}
-.contenedorPadre {
-  background-color:#00966b;
-  height: 180px;
-  display: flex;
-  flex-direction: column;
-  color: white;
-  align-content: center;
-}
-.contenedorPadre h2{
-  text-align: center;
-}
-.contenedorPadre1{
-  background-color:#00966b;
-  display: flex;
-  flex-direction: column;
-  color: white;
-  align-content: center;
-}
-.cliente {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  font-weight: bold;
-}
-.datosCliente {
-  display: flex;
-  flex-direction: column;
-}
-.datosCliente input{
-  border-radius: 5px;
-}
-.tipoDePrestamo{
-  display: flex;
-  flex-direction: column;
-}
-.tipoDePrestamo select{
-  border-radius: 5px;
-}
-
-.contenedorHijo2 {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  border-radius: 5px;
-}
-.contenedorHijo2 input, select{
-  border-radius: 5px;
-  
-}
-.usuarioResultado  {
-  text-align: center;
-  font-weight: bold;
-  
-  color: #1f212c;
-}
-.botones {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 15px;
-}
-.boton {
-  margin-top: 15px;
-  width: 400px;
-  color: #00966b;
-}
-.botones button, input{
-  border-radius: 5px;
-}
-.tituloDeResultados{
-  color:#1f212c;
-  font-weight: bold;
-  text-align: center;
-}
-.storage{
-  background-color: #f9f2ec;
-  text-align: center;
-  color: #1f212c;
-}
-.storage h2{
-  font-weight: bold;
-}
-.storage h5{
-  font-weight: bolder;
+  flex-direction: row;
+  justify-content: space-evenly
 }
