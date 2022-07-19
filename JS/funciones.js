@@ -18,22 +18,38 @@ function prestamosClientes() {
             intereses = array[3] * montoDelCredito;
             console.log('total de intereses: ' + intereses)
         }
+
         totalAPagar = intereses + montoDelCredito;
         console.log('total a pagar con intereses ' + totalAPagar)
         coutas = totalAPagar / cantidadDeCoutas.value;
         console.log('monto por coutas ' + coutas)
         tipoDeCredito = document.getElementById('tipoDePrestamo').value
-        swal({
-            title: "Simulador de Prestamo",
-            text: `
-                Bienvenido
-                Tipo de credito: ${tipoDeCredito}
-                Monto a solicitar es de $ ${montoDelCredito}
-                Su total a pagar es de ${cantidadDeCoutas.value} coutas  de $ ${coutas}`,
-            icon: "success"
-        })
+
+        const loader = setTimeout(() => {
+            let loading = document.querySelector('.loader')
+            loading.style.display = "block"
+        }, 1000);
+        const loader_C = setTimeout(() => {
+            let loading = document.querySelector('.loader')
+            loading.style.display = "none"
+        }, 4000);
+        setTimeout(() => {
+            swal({
+                title: "Simulador de Prestamo",
+                text: `
+                    Bienvenido
+                    Tipo de credito: ${tipoDeCredito}
+                    Monto a solicitar es de $ ${montoDelCredito}
+                    Su total a pagar es de ${cantidadDeCoutas.value} coutas  de $ ${coutas}`,
+                icon: "success"
+            })
+        }, 5000);
+
+
     }
 };
+
+
 
 
 // Las funciones storageUsuario y formularioStorageAndNotUser corresponde al localStorage que se le hizo al usuario

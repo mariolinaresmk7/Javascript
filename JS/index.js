@@ -111,12 +111,36 @@ user.onchange = (e) => {
                 console.log('Cliente del banco: ' + usuario.usuarioBanco.toUpperCase());
                 console.log('Dni: ' + usuario.dni);
             }
-            const en_json = JSON.stringify(listaCliente);
+            /* const en_json = JSON.stringify(listaCliente);
             localStorage.setItem('listaCliente', en_json);
             const usuario1 = JSON.parse(en_json)
-            const usuario3 = JSON.parse(localStorage.getItem('listaCliente'));
+            const usuario3 = JSON.parse(localStorage.getItem('listaCliente')); */
+            const data={
+                name : nombre,
+                lastname : apellido,
+                dni : dni
+            }
+            fetch('https://jsonplaceholder.typicode.com/users', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'content-type': 'application/json;  charset=UTf-8'    
+            }
+        })
+        .then((response) => response.json())
+        .then((data)=>{
+            console.log(data);
+            let storage = document.getElementById('storage');
+            storage.innerHTML = `
+            <h3 class="text-center text-white">Bienvenido</h3>
+            <h5 class="text-center text-white">${data.name.toUpperCase()}, ${data.lastname.toUpperCase()}</h5>
+            <p class="text-center text-white">Sus datos fueron cargados de forma correcta</p>
+            `
+        })
         }
+        
         storageUsuario();
+    
     } else if (usuarioBanco2.checked) {
         usuarioBanco = usuarioBanco2.value
         console.log(`Usuario del banco: ${usuarioBanco.toUpperCase()}`);
@@ -142,3 +166,4 @@ user.onchange = (e) => {
         }
     }
 }
+

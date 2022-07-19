@@ -1,16 +1,36 @@
-*{
-  font-family: 'Quicksand', sans-serif;
+* {
+  font-family: "Quicksand", sans-serif;
 }
 body {
-  background: #3CA55C;
+  background: #3ca55c;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #B5AC49, #3CA55C);
+  background: -webkit-linear-gradient(to left, #b5ac49, #3ca55c);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #B5AC49, #3CA55C);
+  background: linear-gradient(to left, #b5ac49, #3ca55c);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.contenedor{
+.contenedor {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly
+  justify-content: space-evenly;
+}
+
+.loader {
+  margin-left: 50%;
+  display: none;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-left-color: #09f;
+  animation: loades 1s ease infinite;
+}
+
+@keyframes loades {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
